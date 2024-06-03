@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,7 +15,8 @@
             height: 100vh;
             margin: 0;
         }
-        .create-account-container {
+
+        .container {
             background-color: white;
             padding: 20px;
             border-radius: 5px;
@@ -22,20 +24,29 @@
             width: 300px;
             text-align: center;
         }
-        .create-account-container h2 {
+
+        .container h2 {
             margin-bottom: 20px;
         }
-        .create-account-container input[type="text"],
-        .create-account-container input[type="email"],
-        .create-account-container input[type="password"],
-        .create-account-container input[type="date"] {
+
+        .container input[type="text"],
+        .container input[type="email"],
+        .container input[type="password"],
+        .container input[type="date"],
+        .container textarea {
             width: calc(100% - 20px);
             padding: 10px;
             margin: 10px 0;
             border: 1px solid #ccc;
             border-radius: 5px;
         }
-        .create-account-container button {
+
+        .container textarea {
+            resize: vertical;
+            height: 100px;
+        }
+
+        .container button {
             padding: 10px 20px;
             border: none;
             border-radius: 5px;
@@ -43,13 +54,44 @@
             color: white;
             cursor: pointer;
         }
-        .create-account-container button:hover {
+
+        .container button:hover {
             background-color: #0056b3;
+        }
+
+        .social-links img {
+            height: 65px;
+            margin: 0 5px;
+        }
+
+        .social-links a {
+            display: inline-block;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .section-divider {
+            margin: 20px 0;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .feedback-section {
+            text-align: left;
         }
     </style>
 </head>
+
 <body>
-    <div class="create-account-container">
+    <div class="container">
         <h2>Create Account</h2>
         <form>
             <input type="text" name="fullname" placeholder="Full Name" required>
@@ -59,11 +101,35 @@
             <input type="password" name="password" placeholder="Password" required>
             <input type="password" name="confirm-password" placeholder="Confirm Password" required>
             <button type="submit">Create Account</button>
-            <br><br><br>
-            <b>Contact Me</b>
-            <hr>
-            <pre><a href="https://www.facebook.com/profile.php?id=100033710205446" target="_main"><img src="/image/Facebook.png" height="65"></a>  <a href="https://www.instagram.com/indrajit_suzzi/" target="_main"><img src="/image/instagram.png" height="65"></a>  <a href="https://www.linkedin.com/in/indrajit-roy-84558926a/" target="_main"><img src="/image/linkedin.png" height="65"></a>  <a href="https://twitter.com/indrajit_suzzi" target="_main"><img src="/image/x.png" width="75"></a></pre>
         </form>
+
+        <div class="section-divider">Contact Me</div>
+        <div class="social-links">
+            <a href="https://www.facebook.com/profile.php?id=100033710205446" target="Facebook"><img src="/image/Facebook.png" alt="Facebook"></a>
+            <a href="https://www.instagram.com/indrajit_suzzi/" target="Instagrm"><img src="/image/instagram.png" alt="Instagram"></a>
+            <a href="https://www.linkedin.com/in/indrajit-roy-84558926a/" target="Linkedin"><img src="/image/linkedin.png" alt="LinkedIn"></a>
+            <a href="https://twitter.com/indrajit_suzzi" target="X"><img src="/image/x.png" alt="Twitter" width="75"></a>
+        </div>
+
+        <div class="section-divider">Feedback Form</div>
+        <div class="feedback-section">
+            <form action="submit_feedback.php" method="post">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Feedback</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
     </div>
 </body>
+
 </html>
