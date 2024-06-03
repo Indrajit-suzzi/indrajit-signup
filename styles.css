@@ -1,0 +1,101 @@
+/* Apply a global style to the body to ensure full height and no margin */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Style the container to center the form and give it a clean look */
+.container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 600px;
+    height: 90%;
+    overflow-y: auto;
+    text-align: center;
+}
+
+/* Add a margin to the bottom of the headers and other elements for spacing */
+.container h2 {
+    margin-bottom: 20px;
+}
+
+.container input[type="text"],
+.container input[type="email"],
+.container input[type="password"],
+.container input[type="date"],
+.container textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.container textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+.container button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+.container button:hover {
+    background-color: #0056b3;
+}
+
+.social-links img {
+    height: 65px;
+    margin: 0 5px;
+}
+
+.social-links a {
+    display: inline-block;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.section-divider {
+    margin: 20px 0;
+    text-align: center;
+    font-weight: bold;
+}
+
+.feedback-section {
+    text-align: left;
+}
+
+/* Additional styles for radio buttons */
+.container input[type="radio"] {
+    margin-right: 5px;
+}
+
+.container p {
+    margin: 10px 0 5px 0;
+    font-weight: bold;
+}
+
+.container label {
+    margin-right: 15px;
+}
